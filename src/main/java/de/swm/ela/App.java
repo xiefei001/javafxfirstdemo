@@ -1,16 +1,23 @@
 package de.swm.ela;
 
+import de.swm.ela.presentation.MainLayoutView;
 import javafx.application.Application;
 import javafx.application.Preloader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.Lazy;
 
 /**
  * Hello world!
  */
+@Lazy
+@SpringBootApplication
 public class App extends Application {
 
     private static String[] args;
@@ -21,6 +28,9 @@ public class App extends Application {
      */
     @Value("${app.ui.title:Example App}")//
     private String windowTitle;
+
+    @Autowired
+    private MainLayoutView mainLayoutView;
 
 
     @Override
@@ -46,7 +56,8 @@ public class App extends Application {
     public void start(Stage stage) throws Exception {
         notifyPreloader(new Preloader.StateChangeNotification(Preloader.StateChangeNotification.Type.BEFORE_START));
         stage.setTitle(windowTitle);
-        //stage.setScene(new Scene());
+        Parent view = mainLayoutView.getView();
+        stage.setScene(new Scene(view));
         stage.setResizable(true);
         stage.centerOnScreen();
         stage.show();
