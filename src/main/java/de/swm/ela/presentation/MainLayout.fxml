@@ -22,9 +22,6 @@
     </top>
     <center>
         <VBox prefHeight="506.0" prefWidth="378.0" stylesheets="@MainLayout.css" BorderPane.alignment="CENTER">
-            <fx:define>
-                <ToggleGroup fx:id="myGroup"/>
-            </fx:define>
             <children>
                 <VBox prefHeight="233.0" prefWidth="294.0" spacing="20.0" styleClass="mygroup">
                     <children>
@@ -34,6 +31,9 @@
                             </VBox.margin>
                         </Label>
                         <RadioButton fx:id="group1" mnemonicParsing="false" styleClass="myradiobutton" text="group1">
+                            <toggleGroup>
+                                <ToggleGroup fx:id="myGroup"/>
+                            </toggleGroup>
                         </RadioButton>
                         <RadioButton fx:id="group2" mnemonicParsing="false" styleClass="myradiobutton" text="group2"
                                      toggleGroup="$myGroup">
