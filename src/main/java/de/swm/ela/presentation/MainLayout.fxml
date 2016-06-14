@@ -1,33 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.net.URL?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
 
-<GridPane gridLinesVisible="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.swm.ela.presentation.MainLayoutController">
-  <columnConstraints>
-    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-  </columnConstraints>
-  <rowConstraints>
-    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-  </rowConstraints>
-   <children>
-      <HBox prefHeight="100.0" prefWidth="200.0">
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <AnchorPane prefHeight="61.0" prefWidth="800.0" BorderPane.alignment="CENTER">
          <children>
-            <Label fx:id="helloWorldLabel" alignment="CENTER" prefHeight="112.0" prefWidth="105.0" text="Hello World" />
+            <ImageView fitHeight="65.0" fitWidth="249.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="56.0" fitWidth="247.0" layoutX="551.0" pickOnBounds="true" preserveRatio="true" />
          </children>
-      </HBox>
-      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+      </AnchorPane>
+   </top>
+   <center>
+      <VBox prefHeight="506.0" prefWidth="378.0" BorderPane.alignment="CENTER">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="127.0" prefWidth="109.0" text="Username" />
+            <VBox prefHeight="233.0" prefWidth="294.0">
+               <children>
+                  <RadioButton mnemonicParsing="false" prefHeight="60.0" prefWidth="292.0" text="RadioButton" />
+                  <RadioButton mnemonicParsing="false" prefHeight="60.0" prefWidth="302.0" text="RadioButton" />
+                  <RadioButton mnemonicParsing="false" prefHeight="60.0" prefWidth="301.0" text="RadioButton" />
+                  <RadioButton mnemonicParsing="false" text="RadioButton" />
+               </children>
+            </VBox>
          </children>
-      </HBox>
-   </children>
-    <stylesheets>
-        <URL value="@MainLayout.css" />
-    </stylesheets>
-</GridPane>
+      </VBox>
+   </center>
+   <left>
+      <VBox prefHeight="506.0" prefWidth="229.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <VBox prefHeight="506.0" prefWidth="277.0" BorderPane.alignment="CENTER" />
+   </right>
+</BorderPane>
