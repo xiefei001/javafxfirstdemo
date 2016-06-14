@@ -1,0 +1,15 @@
+.mygroup {
+    -fx-border-style: solid;
+    -fx-border-width: 2px;
+    -fx-border-radius: 10px;
+}
+
+.myradiobutton {
+    -fx-font-size: 20px;
+}
+.mytitledlabel {
+    -fx-background-color: derive(#ececec, 26.4%);
+    -fx-alignment: center;
+    -fx-font-size: 20px;
+    -fx-padding: 0px 3px;
+}
