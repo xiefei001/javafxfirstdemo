@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane fx:id="buttonGroup" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+           prefWidth="300.0"
+           style="-fx-content-display: top;" styleClass="bordered-title-border" stylesheets="@ButtonGroup.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.swm.ela.presentation.radiobuttongroup.ButtonGroupController">
+    <VBox styleClass="mybuttongroup">
+        <children>
+            <RadioButton fx:id="group1" mnemonicParsing="false" text="All">
+                <toggleGroup>
+                    <ToggleGroup fx:id="toggleGroup" />
+                </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="group2" mnemonicParsing="false" text="First" toggleGroup="$toggleGroup">
+            </RadioButton>
+            <RadioButton fx:id="group3" mnemonicParsing="false" text="SecondThird" toggleGroup="$toggleGroup">
+            </RadioButton>
+            <RadioButton fx:id="group4" mnemonicParsing="false" text="Fourth" toggleGroup="$toggleGroup" />
+            <RadioButton fx:id="group5" mnemonicParsing="false" text="None" toggleGroup="$toggleGroup" />
+        </children>
+    </VBox>
+    <Label alignment="CENTER" styleClass="bordered-title-title" text="Radio Buttons">
+    </Label>
+
+</StackPane>

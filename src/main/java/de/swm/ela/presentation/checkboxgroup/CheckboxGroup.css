@@ -1,0 +1,22 @@
+.bordered-title-border {
+    -fx-content-display: top;
+    -fx-alignment: top-center;
+    -fx-border-insets: 15px 0 0 0;
+    -fx-padding: 0 0 5 0;
+}
+.bordered-title-title {
+    -fx-translate-y: -13;
+    -fx-content-display: top;
+    -fx-background-color: -fx-background;
+    -fx-padding: 20px 5px 0 5px;
+}
+.checkboxbuttongroup {
+    -fx-border-style: solid;
+    -fx-border-color: darkgrey;
+    -fx-border-width: 2px;
+    -fx-border-radius: 10px;
+    -fx-border-insets: 20 5 5 5;
+    -fx-spacing: 10px;
+    -fx-padding: 8px;
+    -fx-background-insets: 10px;
+}

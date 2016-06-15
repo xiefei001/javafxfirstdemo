@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="300.0" styleClass="bordered-title-border" stylesheets="@CheckboxGroup.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.swm.ela.presentation.checkboxgroup.CheckboxGroupController">
+    <children>
+        <VBox prefHeight="200.0" prefWidth="100.0" styleClass="checkboxbuttongroup">
+            <children>
+                <CheckBox fx:id="first" mnemonicParsing="false" text="First" />
+                <CheckBox fx:id="second" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="Second" />
+                <CheckBox fx:id="third" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="Third" />
+                <CheckBox fx:id="fourth" layoutX="10.0" layoutY="27.0" mnemonicParsing="false" text="Fourth" />
+                <CheckBox fx:id="fifth" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="Fifth" />
+                <CheckBox fx:id="sixth" layoutX="10.0" layoutY="27.0" mnemonicParsing="false" text="Sixth" />
+                <CheckBox fx:id="seventh" layoutX="10.0" layoutY="44.0" mnemonicParsing="false" text="Seventh" />
+                <CheckBox fx:id="eighth" layoutX="10.0" layoutY="61.0" mnemonicParsing="false" text="Eighth" />
+            </children>
+        </VBox>
+        <Label styleClass="bordered-title-title" text="Checked Buttons" />
+    </children>
+</StackPane>

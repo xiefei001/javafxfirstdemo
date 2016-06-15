@@ -1,5 +1,6 @@
 package de.swm.ela;
 
+import com.sun.javafx.application.LauncherImpl;
 import de.swm.ela.presentation.MainLayoutView;
 import javafx.application.Application;
 import javafx.application.Preloader;
@@ -49,14 +50,15 @@ public class App extends Application {
 
     public static void main(String[] args) {
         App.args = args;
-        launch(args);
+        //launch(args);
+        LauncherImpl.launchApplication(App.class, AppPreloader.class, args);
     }
 
     @Override
     public void start(Stage stage) throws Exception {
-        notifyPreloader(new Preloader.StateChangeNotification(Preloader.StateChangeNotification.Type.BEFORE_START));
         stage.setTitle(windowTitle);
         Parent view = mainLayoutView.getView();
+        notifyPreloader(new Preloader.StateChangeNotification(Preloader.StateChangeNotification.Type.BEFORE_START));
         stage.setScene(new Scene(view));
         stage.setResizable(true);
         stage.centerOnScreen();

@@ -1,27 +1,46 @@
 package de.swm.ela.presentation;
 
+import java.net.URL;
+import java.util.ResourceBundle;
+import java.util.concurrent.TimeUnit;
+
+import de.swm.ela.presentation.checkboxgroup.CheckboxGroupView;
+import de.swm.ela.presentation.radiobuttongroup.ButtonGroupView;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.ToggleGroup;
+import javafx.fxml.Initializable;
+import javafx.scene.layout.BorderPane;
+
+import javafx.scene.layout.VBox;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+
+
 /**
- * Created by xie on 2016/6/11.
+ * test.
  */
 @Component
-public class MainLayoutController {
+public class MainLayoutController implements Initializable {
 
-    @FXML
-    Label helloWorldLabel;
+	@FXML
+	VBox centerPane;
 
-    @FXML
-    RadioButton group1, group2, group3, group4;
+	@Autowired
+	ButtonGroupView buttonGroupView;
 
-    @FXML
-    ToggleGroup myGroup;
 
-    void onChange(){
-        //myGroup.selectedToggleProperty().addListener();
-    }
+	@Autowired
+	CheckboxGroupView checkboxGroupView;
+
+	@Override
+	public void initialize(URL location, ResourceBundle resources) {
+		centerPane.getChildren().add(buttonGroupView.getView());
+		centerPane.getChildren().add(checkboxGroupView.getView());
+		try {
+			TimeUnit.SECONDS.sleep(10);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
+	}
 }
